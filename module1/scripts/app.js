@@ -29,7 +29,5 @@
           }
         }
       }
-
-      console.log($scope.msg);
     }
 })();
