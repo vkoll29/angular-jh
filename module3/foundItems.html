@@ -1,0 +1,13 @@
+<div class='alert alert-danger' ng-if='narrow.warning' style="font: bold 20px Helvetica;">Nothing found</div>
+<div class='alert alert-success title' ng-if='narrow.showTable' style="font: bold 20px Helvetica;">Here is a list to choose from</div>
+    <table class="table table-bordered table-hover" ng-if='narrow.showTable'>
+      <thead class="thead-inverse"><tr><th>ShortName</th><th>Full Name</th><th>Description</th><th>action</th></tr></thead>
+      <tbody>
+        <tr ng-repeat="item in narrow.items">
+          <td>{{ item.short_name }}</td>
+          <td>{{item.name}}</td>
+          <td>{{item.description}}</td>
+          <td>  <button class="btn btn-warning" ng-click="narrow.onRemove({index: $index});">Don't want this one!</button></td>
+        </tr>
+      </tbody>
+    </table>
