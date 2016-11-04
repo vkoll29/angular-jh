@@ -1,0 +1,25 @@
+<div style="width: 100%">
+<button class="btn btn-info" ui-sref="home">Back to home</button>
+</div>
+
+<div style="width: 50%;float:left">
+    <!-- <ul>
+        <li ng-repeat="category in ctrl.categories">
+            <a ui-sref="categories.items({categoryShortName: category.short_name})">({{category.short_name}})
+                {{category.name}}</a>
+        </li>
+    </ul> -->
+    <table class="table table-bordered table-hover">
+      <thead><tr><th>ShortName</th><th>Full Name</th></tr></thead>
+      <tbody>
+        <tr ng-repeat="category in ctrl.categories">
+            <td><a ui-sref="categories.items({categoryShortName: category.short_name})">({{category.short_name}})</a></td>
+              <td>  {{category.name}} </td>
+        </tr>
+      </tbody>
+    </table>
+</div>
+
+<div style="width: 50%;float:left">
+    <ui-view></ui-view>
+</div>
